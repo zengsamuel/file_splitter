@@ -39,6 +39,13 @@ def merge(input_filename_prefix, output_filename):
             i += 1
             input_filename = "{}.{}".format(input_filename_prefix, i)
     
+"""
+   python file_splitter split inputfile_name file_size
+   python file_splitter merge inputfile_prefix outputfile_name
+   for example:
+     split:  python file_splitter split a.avi 1000000000
+     merge:  python file_splitter merge a.avi a.avi
+"""
 if sys.argv[1] == 'split': 
     split(sys.argv[2], int(sys.argv[3]))
 elif sys.argv[1] == 'merge':
